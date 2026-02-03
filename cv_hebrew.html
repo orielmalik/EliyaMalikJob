@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>קורות חיים - אליה מליק</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #f0f0f0;
+        }
+
+        .cv-page {
+            background: white;
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            padding: 15mm;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        h1 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            margin-top: 0;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .contact {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            font-size: 0.85rem;
+        }
+
+        .section {
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-weight: bold;
+            background: #f8f9fa;
+            padding: 3px 10px;
+            margin-bottom: 8px;
+            border-right: 4px solid #0056b3;
+            font-size: 1rem;
+        }
+
+        .item {
+            margin-bottom: 10px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        ul {
+            margin: 2px 0;
+            padding-right: 20px;
+            font-size: 0.9rem;
+        }
+
+        li {
+            margin-bottom: 2px;
+        }
+
+        @page {
+            size: A4;
+            margin: 0mm;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .cv-page {
+                box-shadow: none;
+                margin: 0;
+                padding: 10mm 15mm;
+                width: 100%;
+                border: none;
+                min-height: auto;
+            }
+
+            #print-btn {
+                display: none;
+            }
+        }
+
+        #print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="print-btn" onclick="window.print()">הדפס קורות חיים</button>
+    <div class="cv-page">
+        <h1>אליה מליק</h1>
+        <div class="subtitle">מנהל רשתות</div>
+
+        <div class="contact">
+            📞 055-6612722 | 📧 eliya.malik.2004@gmail.com | 📍 תל אביב, ישראל
+        </div>
+
+        <div class="section">
+            <div class="section-title">מטרה תעסוקתית</div>
+            <p>
+                מנהל רשת בצה״ל בעל ניסיון מעשי בניהול ותפעול תשתיות מחשוב, אבטחת מידע ופתרון תקלות מורכבות. מחפש תפקיד
+                מאתגר בתחום ניהול והרשתות והתשתיות, תוך שימוש בידע טכני מעמיק, יכולת ניתוח ופתרון בעיות, ויכולת עבודה
+                בסביבה טכנולוגית דינמית ומרובת משימות.
+            </p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">ניסיון תעסוקתי</div>
+            <div class="item">
+                <div class="item-header">
+                    <span>מנהל רשתות – שירות צבאי | צה"ל</span>
+                    <span>2022–2024</span>
+                </div>
+                <ul>
+                    <li>ניהול ותחזוקה של תשתיות רשת מאובטחות בסביבה צבאית</li>
+                    <li>התקנה, תצורה ותחזוקה של מערכות מצלמות אבטחה (IP, DVR, NVR)</li>
+                    <li>אבחון ותיקון תקלות חומרה ומחשוב ברמת שטח ומערכת</li>
+                    <li>תמיכה ב-OFFICE 365</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">כישורים מקצועיים</div>
+            <ul>
+                <li><strong>רשתות ואבטחה:</strong> התקנת מצלמות IP, ניהול VLAN, חומת אש בסיסית</li>
+                <li><strong>מערכות הפעלה:</strong> Linux (Ubuntu/CentOS) – פקודות שורש</li>
+                <li><strong>חומרה:</strong> אבחון ותיקון מחשבים, שרתים, ציוד קצה</li>
+                <li><strong>פתרון בעיות:</strong> גישה שיטתית, עבודה תחת לחץ</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-title">השכלה ושפות</div>
+            <p><strong>השכלה:</strong> קורסי CCNA, ניהול רשתות ואבטחת מידע (סיווג בטחוני). בגרות מלאה.</p>
+            <p><strong>שפות:</strong> עברית – שפת אם | אנגלית – בסיסית (קריאה טכנית)</p>
+        </div>
+    </div>
+    <script>
+        window.onload = () => {
+            const params = new URLSearchParams(window.location.search);
+            if (params.get('print') === 'true') {
+                window.print();
+            }
+        };
+    </script>
+</body>
+
+</html>
