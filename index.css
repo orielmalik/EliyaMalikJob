@@ -33,7 +33,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 clamp(1rem, 5vw, 2rem);
 }
 
 /* Glassmorphism Classes */
@@ -58,6 +58,7 @@ h3 {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    word-break: keep-all;
 }
 
 /* Navbar */
@@ -121,20 +122,27 @@ nav.scrolled {
 }
 
 .hero-content h1 {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.hero-content h2 {
+    font-size: clamp(1.25rem, 4vw, 2rem);
     margin-bottom: 1rem;
 }
 
 .hero-content p {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 3vw, 1.25rem);
     color: var(--text-dim);
     margin-bottom: 2rem;
 }
 
 .profile-img-container {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
     margin: 0 auto;
 }
 
@@ -241,8 +249,14 @@ section {
 }
 
 @media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 120px 0 60px;
+    }
+
     .hero-grid {
         grid-template-columns: 1fr;
+        gap: 3rem;
         text-align: center;
     }
 
@@ -253,5 +267,33 @@ section {
     .profile-img-container {
         width: 300px;
         height: 300px;
+    }
+
+    .cta-group {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .nav-content .logo {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cta-group {
+        flex-direction: column;
     }
 }

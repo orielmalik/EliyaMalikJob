@@ -6,12 +6,12 @@
     <title>CV - Eliya Malik</title>
     <style>
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            line-height: 1.4;
-            color: #333;
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+            line-height: 1.3;
+            color: #1e293b;
             margin: 0;
             padding: 0;
-            background: #f0f0f0;
+            background: #f1f5f9;
         }
 
         .cv-page {
@@ -19,65 +19,78 @@
             width: 210mm;
             min-height: 297mm;
             margin: 0 auto;
-            padding: 15mm;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 10mm 15mm;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
             position: relative;
         }
 
         h1 {
-            color: #0056b3;
-            border-bottom: 2px solid #0056b3;
-            padding-bottom: 5px;
-            margin-bottom: 5px;
-            margin-top: 0;
+            color: #0ea5e9;
+            border-bottom: 2px solid #0ea5e9;
+            padding-bottom: 2px;
+            margin: 0;
+            font-size: 24pt;
         }
 
         .subtitle {
-            font-size: 1.1rem;
+            font-size: 14pt;
             font-weight: bold;
-            color: #666;
-            margin-bottom: 15px;
+            color: #64748b;
+            margin-bottom: 8px;
         }
 
         .contact {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
-            font-size: 0.85rem;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 9pt;
+            display: flex;
+            gap: 15px;
+            color: #475569;
         }
 
         .section {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .section-title {
-            font-weight: bold;
-            background: #f8f9fa;
-            padding: 3px 10px;
-            margin-bottom: 8px;
-            border-left: 4px solid #0056b3;
-            font-size: 1rem;
+            font-weight: 800;
+            background: #f8fafc;
+            padding: 2px 10px;
+            margin-bottom: 5px;
+            border-left: 4px solid #0ea5e9;
+            font-size: 11pt;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .item {
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .item-header {
             display: flex;
             justify-content: space-between;
             font-weight: bold;
-            font-size: 0.95rem;
+            font-size: 10pt;
+            color: #0f172a;
         }
 
         ul {
             margin: 2px 0;
-            padding-left: 20px;
-            font-size: 0.9rem;
+            padding-left: 18px;
+            font-size: 9.5pt;
         }
 
         li {
-            margin-bottom: 2px;
+            margin-bottom: 1px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            font-size: 9.5pt;
         }
 
         @page {
@@ -110,67 +123,98 @@
             position: fixed;
             top: 20px;
             left: 20px;
-            padding: 10px 20px;
-            background: #007bff;
+            padding: 8px 16px;
+            background: #0ea5e9;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 6px;
             cursor: pointer;
+            font-weight: 600;
+            z-index: 100;
         }
     </style>
 </head>
 
 <body>
-    <button id="print-btn" onclick="window.print()">Print CV</button>
+    <button id="print-btn" onclick="window.print()">Download/Print PDF</button>
     <div class="cv-page">
-        <h1>Eliya Malik</h1>
-        <div class="subtitle">Network Administrator</div>
+        <h1>ELIYA MALIK</h1>
+        <div class="subtitle">Network & IT Support Specialist</div>
 
         <div class="contact">
-            📞 055-6612722 | 📧 eliya.malik.2004@gmail.com | 📍 Tel Aviv, Israel
+            <span>📞 055-6612722</span>
+            <span>📧 eliya.malik.2004@gmail.com</span>
+            <span>📍 Tel Aviv, Israel</span>
         </div>
 
         <div class="section">
-            <div class="section-title">Professional Objective</div>
-            <p>
-                Network administrator in the IDF with practical experience in managing and operating computing
-                infrastructures, information security, and complex troubleshooting. Seeking a challenging role in
-                network and infrastructure management, utilizing deep technical knowledge, analysis and problem-solving
-                skills, and the ability to work in a dynamic, multi-tasking technological environment.
+            <div class="section-title">Professional Summary</div>
+            <p style="font-size: 9.5pt; margin: 4px 0;">
+                Highly motivated Network Administrator with hands-on experience in managing secure infrastructures,
+                technical support, and complex troubleshooting. Proven ability to operate in high-pressure military
+                environments, delivering scalable IT solutions and ensuring maximum system uptime. Committed to
+                professional excellence and continuous technological growth.
             </p>
         </div>
 
         <div class="section">
-            <div class="section-title">Work Experience</div>
+            <div class="section-title">Professional Experience</div>
             <div class="item">
                 <div class="item-header">
-                    <span>Network Administrator – Military Service | IDF</span>
-                    <span>2022–2024</span>
+                    <span>Network Administrator – Military Service | IDF (2022–2025)</span>
                 </div>
                 <ul>
-                    <li>Management and maintenance of secure network infrastructures in a military environment</li>
-                    <li>Installation, configuration, and maintenance of security camera systems (IP, DVR, NVR)</li>
-                    <li>Diagnosis and repair of hardware and computing faults at field and system levels</li>
-                    <li>Support for OFFICE 365</li>
+                    <li>Managed and maintained secure network infrastructures in high-stakes military environments.</li>
+                    <li>Expertise in installation, configuration, and maintenance of IP security camera systems (DVR,
+                        NVR).</li>
+                    <li>Implemented network monitoring tools and performance optimization protocols.</li>
+                    <li>Provided comprehensive hardware diagnostics and repair for servers, endpoints, and peripheral
+                        equipment.</li>
+                    <li>Supported Microsoft 365 environments and managed technical field support operations.</li>
                 </ul>
             </div>
         </div>
 
         <div class="section">
-            <div class="section-title">Professional Skills</div>
-            <ul>
-                <li><strong>Networking & Security:</strong> IP Camera installation, VLAN management, Basic Firewall</li>
-                <li><strong>Operating Systems:</strong> Linux (Ubuntu/CentOS) – CLI commands</li>
-                <li><strong>Hardware:</strong> Diagnosis and repair of computers, servers, peripheral equipment</li>
-                <li><strong>Problem Solving:</strong> Systematic approach, working under pressure</li>
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div>
+                    <strong>Networking & Security:</strong>
+                    <ul>
+                        <li>IP Camera Installation & VLAN Mgmt</li>
+                        <li>Basic Firewall & Security Protocols</li>
+                        <li>Network Segmentation & Monitoring</li>
+                    </ul>
+                </div>
+                <div>
+                    <strong>OS & Infrastructure:</strong>
+                    <ul>
+                        <li>Linux (Ubuntu/CentOS) - CLI Mastery</li>
+                        <li>Hardware Diagnostics & Site Repair</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Education & Certifications</div>
+            <ul style="list-style-type: none; padding-left: 0; font-size: 9.5pt;">
+                <li><strong>CCNA:</strong> Cisco Certified Network Associate Courses & Implementation</li>
+                <li><strong>Military Training:</strong> Network Management & Information Security (High Security
+                    Clearance)</li>
+                <li><strong>Matriculation:</strong> Full Matriculation Certificate</li>
+                <li><strong>Certifications:</strong> Valid Civilian Driving License | Military & Civilian Security
+                    Classification</li>
             </ul>
         </div>
 
         <div class="section">
-            <div class="section-title">Education & Languages</div>
-            <p><strong>Education:</strong> CCNA Courses, Network Management, and Information Security (Security
-                Clearance). Full Matriculation.</p>
-            <p><strong>Languages:</strong> Hebrew – Native | English – Basic (Technical reading)</p>
+            <div class="section-title">Languages</div>
+            <div style="font-size: 9.5pt;">
+                <span><strong>Hebrew:</strong> Native proficiency</span> |
+                <span><strong>English:</strong> Professional technical reading & basic conversational</span>
+            </div>
         </div>
     </div>
     <script>
