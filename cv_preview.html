@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliya Malik - CV Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0ea5e9;
+            --text-main: #1e293b;
+            --text-secondary: #475569;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Assistant', sans-serif;
+            background-color: #f1f5f9;
+            color: var(--text-main);
+            line-height: 1.4;
+            padding: 1rem;
+            font-size: 14px;
+        }
+
+        .cv-page {
+            background: white;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1.5rem 2.5rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            position: relative;
+            min-height: 297mm; /* A4 Height */
+        }
+
+        [lang="en"] .cv-page {
+            font-family: 'Inter', sans-serif;
+            direction: ltr;
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        section {
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 0.75rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding-bottom: 0.2rem;
+        }
+
+        .exp-item {
+            margin-bottom: 1rem;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .exp-role {
+            color: var(--text-main);
+        }
+
+        .exp-date {
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .exp-company {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+            font-size: 0.95rem;
+        }
+
+        ul {
+            padding-right: 1.25rem;
+        }
+
+        [lang="en"] ul {
+            padding-right: 0;
+            padding-left: 1.25rem;
+        }
+
+        li {
+            margin-bottom: 0.2rem;
+            font-size: 0.95rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .skill-cat h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .print-btn {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            font-weight: 700;
+            z-index: 100;
+        }
+
+        @media print {
+            body { background: white; padding: 0; margin: 0; }
+            .cv-page { 
+                box-shadow: none; 
+                width: 100%; 
+                max-width: 100%; 
+                margin: 0; 
+                padding: 1cm 1.5cm; 
+                min-height: auto;
+            }
+            .print-btn { display: none; }
+        }
+
+        [data-lang] { display: none; }
+        .active-lang { display: block; }
+    </style>
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()">הדפס / Print to PDF</button>
+
+    <!-- HEBREW VERSION -->
+    <div class="cv-page active-lang" data-lang="he" id="cv-he">
+        <header>
+            <h1>אליה מליק</h1>
+            <div class="subtitle">מומחה תשתיות ורשתות (Junior)</div>
+            <div class="contact-grid">
+                <div>📞 055-6612722</div>
+                <div>📧 eliya.malik.2004@gmail.com</div>
+                <div>📍 תל אביב, ישראל</div>
+            </div>
+        </header>
+
+        <section>
+            <h2>תמצית מקצועית</h2>
+            <p>מומחה תשתיות ורשתות בתחילת דרכו עם ניסיון מעשי בסביבה צבאית מאובטחת, הכולל ניהול רשתות, תחזוקת מערכות קריטיות ותמיכה טכנית מתקדמת. בעל יכולת עבודה תחת לחץ, פתרון תקלות מורכבות בזמן אמת ושמירה על זמינות מערכות גבוהה. מחפש להשתלב בתפקיד IT/Infrastructure ולהמשיך להתפתח בסביבה טכנולוגית מתקדמת.</p>
+        </section>
+
+        <section>
+            <h2>ניסיון תעסוקתי</h2>
+            <div class="exp-item">
+                <div class="exp-header">
+                    <span class="exp-role">מנהל רשתות</span>
+                    <span class="exp-date">2022–2025</span>
+                </div>
+                <div class="exp-company">צה"ל | שירות צבאי</div>
+                <ul>
+                    <li>ניהול ותחזוקה שוטפת של תשתיות רשת מאובטחות בסביבה מבצעית רגישה</li>
+                    <li>התקנה, קונפיגורציה ותחזוקה של מערכות מצלמות אבטחה (IP, NVR, DVR)</li>
+                    <li>עבודה עם VLANs וסגמנטציה לשיפור ביצועים ואבטחת רשת</li>
+                    <li>אבחון ופתרון תקלות חומרה ותשתית עבור תחנות קצה, שרתים וציוד היקפי</li>
+                    <li>תמיכה במשתמשים ועבודה עם Microsoft 365 (ניהול משתמשים ותקלות גישה)</li>
+                    <li>שימוש בכלי ניטור לזיהוי תקלות ושיפור זמינות המערכות</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>כישורים טכניים</h2>
+            <div class="skills-grid">
+                <div class="skill-cat">
+                    <h3>Networking & Security</h3>
+                    <ul>
+                        <li>VLANs, Network Segmentation</li>
+                        <li>יסודות Firewalls ופרוטוקולי תקשורת</li>
+                        <li>התקנה וניהול מצלמות IP</li>
+                    </ul>
+                </div>
+                <div class="skill-cat">
+                    <h3>Systems & Infrastructure</h3>
+                    <ul>
+                        <li>Linux (Ubuntu, CentOS) – CLI</li>
+                        <li>Troubleshooting חומרה ותשתיות</li>
+                        <li>Microsoft 365 – תמיכה וניהול</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>השכלה והכשרות</h2>
+            <ul>
+                <li><strong>הכשרה צבאית:</strong> ניהול רשתות ואבטחת מידע (סיווג בטחוני גבוה)</li>
+                <li><strong>קורסי CCNA:</strong> Cisco Networking Fundamentals</li>
+                <li><strong>תעודת בגרות מלאה</strong></li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- ENGLISH VERSION -->
+    <div class="cv-page" data-lang="en" id="cv-en" lang="en">
+        <header>
+            <h1>Eliya Malik</h1>
+            <div class="subtitle">Network & IT Infrastructure Specialist (Junior)</div>
+            <div class="contact-grid">
+                <div>📞 055-6612722</div>
+                <div>📧 eliya.malik.2004@gmail.com</div>
+                <div>📍 Tel Aviv, Israel</div>
+            </div>
+        </header>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <p>Junior Network & IT Infrastructure Specialist with hands-on experience in high-security military environments. Proven track record in managing secure network infrastructures, maintaining critical systems, and providing advanced technical support. Skilled in real-time troubleshooting under pressure and ensuring high system availability. Eager to contribute to a forward-thinking IT/Infrastructure team.</p>
+        </section>
+
+        <section>
+            <h2>Work Experience</h2>
+            <div class="exp-item">
+                <div class="exp-header">
+                    <span class="exp-role">Network Administrator</span>
+                    <span class="exp-date">2022–2025</span>
+                </div>
+                <div class="exp-company">IDF | Military Service</div>
+                <ul>
+                    <li>Managed and maintained secure network infrastructures in sensitive operational environments.</li>
+                    <li>Installed, configured, and maintained security camera systems (IP, NVR, DVR).</li>
+                    <li>Implemented and managed VLANs and network segmentation to optimize performance and security.</li>
+                    <li>Provided comprehensive hardware diagnostics and repair for servers, endpoints, and peripheral equipment.</li>
+                    <li>Supported Microsoft 365 environments including user management and technical field operations.</li>
+                    <li>Utilized monitoring tools to identify faults and improve overall system availability.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-cat">
+                    <h3>Networking & Security</h3>
+                    <ul>
+                        <li>IP Camera Installation & VLAN Management</li>
+                        <li>Basic Firewall & Security Protocols</li>
+                        <li>Network Segmentation & Monitoring</li>
+                    </ul>
+                </div>
+                <div class="skill-cat">
+                    <h3>OS & Infrastructure</h3>
+                    <ul>
+                        <li>Linux (Ubuntu/CentOS) – CLI Mastery</li>
+                        <li>Hardware Diagnostics & Site Repair</li>
+                        <li>Microsoft 365 Administration</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education & Certifications</h2>
+            <ul>
+                <li><strong>CCNA:</strong> Cisco Certified Network Associate Courses & Implementation</li>
+                <li><strong>Military Training:</strong> Network Management & Information Security (High Clearance)</li>
+                <li><strong>Matriculation:</strong> Full Matriculation Certificate</li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'he';
+        
+        document.querySelectorAll('[data-lang]').forEach(el => {
+            if (el.dataset.lang === lang) {
+                el.classList.add('active-lang');
+                document.documentElement.lang = lang;
+                document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+            } else {
+                el.classList.remove('active-lang');
+            }
+        });
+    </script>
+</body>
+</html>

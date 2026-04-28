@@ -1,14 +1,16 @@
 :root {
     --primary: #0ea5e9;
     --primary-dark: #0284c7;
+    --primary-glow: rgba(14, 165, 233, 0.5);
     --secondary: #64748b;
     --accent: #f59e0b;
-    --bg-dark: #0f172a;
-    --bg-card: rgba(30, 41, 59, 0.7);
+    --accent-glow: rgba(245, 158, 11, 0.5);
+    --bg-dark: #020617;
+    --bg-card: rgba(15, 23, 42, 0.6);
     --text-light: #f8fafc;
     --text-dim: #94a3b8;
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -54,11 +56,12 @@ h3 {
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, var(--primary), var(--accent));
+    background: linear-gradient(135deg, var(--primary) 0%, #38bdf8 50%, var(--accent) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     word-break: keep-all;
+    filter: drop-shadow(0 0 20px var(--primary-glow));
 }
 
 /* Navbar */
@@ -151,7 +154,40 @@ nav.scrolled {
     height: 100%;
     object-fit: cover;
     border-radius: 2rem;
-    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--glass-border);
+    transition: var(--transition);
+}
+
+.profile-img:hover {
+    transform: scale(1.02) rotate(1deg);
+    border-color: var(--primary);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 300px;
+    height: 300px;
+    background: var(--primary);
+    filter: blur(150px);
+    opacity: 0.15;
+    z-index: -1;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    width: 250px;
+    height: 250px;
+    background: var(--accent);
+    filter: blur(130px);
+    opacity: 0.1;
+    z-index: -1;
 }
 
 /* Sections */
